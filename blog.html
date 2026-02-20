@@ -3,411 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Asiatic Engineers</title>
+    <title>Blog | Asiatic Engineers - ZLD & Waste Water Treatment Insights</title>
+    <meta name="description" content="Expert insights on Zero Liquid Discharge (ZLD), RO reject treatment, industrial wastewater management, and evaporation technology.">
+    <link rel="canonical" href="https://www.wastewaterevaporation.com/blog.html">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-bg: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
-        
-        .blog-header {
-            background: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .blog-logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .blog-nav a {
-            color: var(--primary-color);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .blog-nav a:hover, .blog-nav a.active {
-            color: var(--accent-color);
-        }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/water-treatment.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 0;
-            color: #fff;
-            margin-bottom: 50px;
-        }
-        
-        .hero-section h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        .featured-post {
-            position: relative;
-            margin-bottom: 50px;
-        }
-        
-        .featured-post img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        .featured-content {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: -50px;
-            position: relative;
-            margin-left: 30px;
-            margin-right: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .post-category {
-            background: var(--accent-color);
-            color: #fff;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        
-        .post-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .post-meta {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-        
-        .post-excerpt {
-            color: #555;
-            margin-bottom: 15px;
-        }
-        
-        .read-more {
-            color: var(--accent-color);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .blog-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .blog-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .blog-card-content {
-            padding: 20px;
-        }
-        
-        .blog-card .post-title {
-            font-size: 18px;
-        }
-        
-        .newsletter-section {
-            background: var(--light-bg);
-            padding: 60px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .newsletter-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .newsletter-form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            gap: 10px;
-        }
-        
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 20px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-        }
-        
-        .newsletter-form button {
-            background: var(--accent-color);
-            color: #fff;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        
-        .newsletter-form button:hover {
-            background: #c0392b;
-        }
-        
-        footer {
-            background: var(--primary-color);
-            color: #fff;
-            padding: 40px 0;
-            margin-top: 50px;
-        }
-        
-        @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .featured-content {
-                margin: 20px;
-            }
-            
-            .hero-section h1 {
-                font-size: 28px;
-            }
-        }
+        .blog-hero { background: linear-gradient(135deg, #0d4f3c 0%, #1a7a5e 100%); padding: 80px 0; color: white; }
+        .blog-card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); }
+        .blog-card img { height: 200px; object-fit: cover; }
     </style>
-
-    <style>
-    /* Dropdown Animation Fix */
-    .main-menu ul li ul.sub-menu {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: none !important;
-        pointer-events: auto !important;
-        margin-top: 0 !important;
-        transition: all 0.3s ease !important;
-    }
-    .main-menu ul li:hover > ul.sub-menu {
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: translateY(0) !important;
-        margin-top: 10px !important;
-    }
-    .main-menu ul li ul.sub-menu li ul.sub-menu {
-        left: 100% !important;
-        top: 0 !important;
-        margin-top: 0 !important;
-        margin-left: 0 !important;
-    }
-    .main-menu ul li ul.sub-menu li:hover > ul.sub-menu {
-        margin-left: 0 !important;
-    }
-    </style>
-
 </head>
 <body>
-    <!-- Header -->
-    <div class="blog-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="blog-logo">ASIATIC <span style="color: var(--accent-color);">ENGINEERS</span></div>
-                </div>
-                <div class="col-md-8">
-                    <div class="blog-nav text-end">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="blog.html" class="active">Blog</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="hero-section">
+    <div class="blog-hero">
         <div class="container text-center">
-            <h1>Blog</h1>
-            <p>Insights on Water Treatment, ZLD Systems & Industrial Evaporation</p>
+            <h1 class="display-4 fw-bold">Blog</h1>
+            <p class="lead">Expert Insights on Water Treatment & ZLD Systems</p>
         </div>
     </div>
-
-    <!-- Featured Post -->
-    <div class="container">
-        <div class="featured-post">
-            <img src="assets/img/ZLD-1.png" alt="Featured Post">
-            <div class="featured-content">
-                <span class="post-category">Technology</span>
-                <h2 class="post-title">Revolutionary Zero Liquid Discharge Systems for Sustainable Industrial Operations</h2>
-                <div class="post-meta">
-                    <span><i class="far fa-calendar"></i> February 18, 2026</span> &nbsp;&nbsp;
-                    <span><i class="far fa-user"></i> Asiatic Engineers</span>
-                </div>
-                <p class="post-excerpt">Discover how modern ZLD systems are transforming industrial wastewater management, reducing environmental impact while maximizing water recovery rates...</p>
-                <a href="blog/zld-systems.html" class="read-more">Read More →</a>
-            </div>
-        </div>
-
-        <!-- Latest Posts Grid -->
-        <h2 class="section-title">Latest Stories</h2>
-        <div class="blog-grid">
-            <!-- Post 1 -->
-            <div class="blog-card">
-                <img src="assets/img/HOW-DOES-EVAPORATION-OCCUR.png" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Technology</span>
-                    <h3 class="post-title">Understanding RO Reject Management</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 15, 2026</span>
+    
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="blog-card card h-100">
+                    <img src="assets/img/ZLD-1.png" class="card-img-top" alt="ZLD Guide">
+                    <div class="card-body">
+                        <h5 class="card-title">Complete ZLD Guide 2024</h5>
+                        <p class="card-text">Everything you need to know about Zero Liquid Discharge systems.</p>
+                        <a href="blog/zld-guide-2024.html" class="btn btn-success">Read More →</a>
                     </div>
-                    <p class="post-excerpt">Learn how to effectively manage RO reject water and reduce disposal costs...</p>
-                    <a href="blog/ro-reject.html" class="read-more">Read More →</a>
                 </div>
             </div>
-
-            <!-- Post 2 -->
-            <div class="blog-card">
-                <img src="assets/img/evaporation-symbol1-1.png" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Industry</span>
-                    <h3 class="post-title">High TDS Wastewater Solutions</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 12, 2026</span>
+            <div class="col-md-6 col-lg-3">
+                <div class="blog-card card h-100">
+                    <img src="assets/img/HIGH-TDS-R-O-REJECT-TREATMENT-PLANT.jpeg" class="card-img-top" alt="RO Reject">
+                    <div class="card-body">
+                        <h5 class="card-title">RO Reject Treatment</h5>
+                        <p class="card-text">Effective methods for treating RO reject water.</p>
+                        <a href="blog/ro-reject-treatment-guide.html" class="btn btn-success">Read More →</a>
                     </div>
-                    <p class="post-excerpt">Advanced evaporation technologies for high TDS industrial wastewater...</p>
-                    <a href="blog/high-tds.html" class="read-more">Read More →</a>
                 </div>
             </div>
-
-            <!-- Post 3 -->
-            <div class="blog-card">
-                <img src="assets/img/FACTS-ABOUT-EVAPORATION-PROCESS.png" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Sustainability</span>
-                    <h3 class="post-title">Water Conservation in Industries</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 10, 2026</span>
+            <div class="col-md-6 col-lg-3">
+                <div class="blog-card card h-100">
+                    <img src="assets/img/evaporation-symbol1-1.png" class="card-img-top" alt="Leachate">
+                    <div class="card-body">
+                        <h5 class="card-title">Leachate Treatment</h5>
+                        <p class="card-text">Comprehensive guide to landfill leachate treatment.</p>
+                        <a href="blog/leachate-treatment-guide.html" class="btn btn-success">Read More →</a>
                     </div>
-                    <p class="post-excerpt">Best practices for industrial water conservation and sustainable operations...</p>
-                    <a href="blog/water-conservation.html" class="read-more">Read More →</a>
                 </div>
             </div>
-
-            <!-- Post 4 -->
-            <div class="blog-card">
-                <img src="assets/img/HIGH-TDS-R-O-REJECT-TREATMENT-PLANT.jpeg" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Technology</span>
-                    <h3 class="post-title">Thermal Evaporation Systems Explained</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 8, 2026</span>
+            <div class="col-md-6 col-lg-3">
+                <div class="blog-card card h-100">
+                    <img src="assets/img/FACTS-ABOUT-EVAPORATION-PROCESS.png" class="card-img-top" alt="Cost Comparison">
+                    <div class="card-body">
+                        <h5 class="card-title">ZLD Cost Comparison</h5>
+                        <p class="card-text">Thermal vs Non-Thermal evaporation systems.</p>
+                        <a href="blog/zld-cost-comparison.html" class="btn btn-success">Read More →</a>
                     </div>
-                    <p class="post-excerpt">A comprehensive guide to thermal evaporation systems for wastewater treatment...</p>
-                    <a href="blog/thermal-evaporation.html" class="read-more">Read More →</a>
                 </div>
-            </div>
-
-            <!-- Post 5 -->
-            <div class="blog-card">
-                <img src="assets/img/REVERSE-OSMOSIS-REJECT-WATER-TREATMENT1.png" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Case Study</span>
-                    <h3 class="post-title">Pharmaceutical Waste Management</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 5, 2026</span>
-                    </div>
-                    <p class="post-excerpt">How we helped a pharmaceutical company achieve zero liquid discharge...</p>
-                    <a href="blog/pharma-case-study.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
-            <!-- Post 6 -->
-            <div class="blog-card">
-                <img src="assets/img/blog-7.jpg" alt="Blog Post">
-                <div class="blog-card-content">
-                    <span class="post-category">Trends</span>
-                    <h3 class="post-title">Future of Water Treatment 2026</h3>
-                    <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> Feb 2, 2026</span>
-                    </div>
-                    <p class="post-excerpt">Emerging trends and technologies in industrial water treatment...</p>
-                    <a href="blog/future-trends.html" class="read More →</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="newsletter-section">
-            <div class="container">
-                <h3>Subscribe to Our Newsletter</h3>
-                <p>Get the latest insights on water treatment technology delivered to your inbox.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit">Subscribe</button>
-                </form>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
+    
+    <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2026 Asiatic Engineers. All Rights Reserved.</p>
-            <p>Specializing in Zero Liquid Discharge Systems, RO Solutions & Waste Water Treatment</p>
+            <p class="mb-0">© 2024 Asiatic Engineers. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-<!-- Auto-push test -->
-<!-- Auto test 2 -->
