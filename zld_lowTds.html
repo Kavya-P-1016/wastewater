@@ -72,6 +72,35 @@
 		"offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.wastewaterevaporation.com/zld_lowTds.html" }
 	}
 	</script>
+
+    <style>
+    /* Dropdown Animation Fix */
+    .main-menu ul li ul.sub-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        margin-top: 0 !important;
+        transition: all 0.3s ease !important;
+    }
+    .main-menu ul li:hover > ul.sub-menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        margin-top: 10px !important;
+    }
+    .main-menu ul li ul.sub-menu li ul.sub-menu {
+        left: 100% !important;
+        top: 0 !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+    .main-menu ul li ul.sub-menu li:hover > ul.sub-menu {
+        margin-left: 0 !important;
+    }
+    </style>
+
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1271.0" data-gr-ext-installed="" style="overflow: visible;">
@@ -171,9 +200,14 @@
 
                                                 </li>
 
+												<!-- Blog -->
+												<li>
+													<a href="blog.html">Blog</a>
+												</li>
+
                                                 <!-- Products -->
                                                 <li>
-                                                    <a href="javascript:void(0);">Products</a>
+                                                    <a href="zld.html">Products</a>
                                                     <ul class="sub-menu">
                                                         <li>
                                                             <a href="zld.html">ZLD</a>
@@ -226,7 +260,7 @@
 
                                                 <!-- Contact -->
                                                 <li>
-                                                    <a href="contact.html">contact</a>
+                                                    <a href="contact.html">Contact</a>
                                                 </li>
                                             </ul>
                                         </nav>
