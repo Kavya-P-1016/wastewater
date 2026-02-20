@@ -159,6 +159,41 @@
     }
     </style>
 
+
+    <style>
+    /* Navigation fix - keep all items on one line */
+    .main-menu {
+        overflow: visible !important;
+    }
+    .main-menu ul.menu-list {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        justify-content: flex-start !important;
+    }
+    .main-menu ul.menu-list > li {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+    .main-menu ul.menu-list > li > a {
+        white-space: nowrap !important;
+        font-size: 13px !important;
+        padding: 0 8px !important;
+    }
+    header, .theme-main-menu, .main-header-area {
+        overflow: visible !important;
+        max-width: 100% !important;
+    }
+    /* Dropdown z-index fix */
+    .main-menu ul li ul.sub-menu {
+        z-index: 99999 !important;
+        position: absolute !important;
+    }
+    .theme-main-menu {
+        z-index: 9999 !important;
+    }
+    </style>
+
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1271.0" data-gr-ext-installed="" style="overflow: visible;">
