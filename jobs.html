@@ -89,6 +89,33 @@
     }
     </style>
 
+
+    <style>
+    /* Fix dropdown z-index and navigation */
+    .theme-main-menu, .main-header-area {
+        z-index: 9999 !important;
+        position: relative !important;
+    }
+    .main-menu ul li ul.sub-menu {
+        z-index: 10000 !important;
+    }
+    .main-menu .menu-list {
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        justify-content: flex-start !important;
+    }
+    .main-menu .menu-list > li {
+        flex-shrink: 0 !important;
+    }
+    .main-menu .menu-list > li > a {
+        font-size: 14px !important;
+        padding: 0 10px !important;
+    }
+    header {
+        overflow: visible !important;
+    }
+    </style>
+
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1271.0" data-gr-ext-installed="" style="overflow: visible;">
