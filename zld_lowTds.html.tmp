@@ -1,0 +1,15 @@
+	
+	<!-- SEO Schema Markup -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Product",
+		"name": "Low TDS Evaporation System",
+		"description": "Asiatic Engineers' Low TDS Evaporation System using patented non-thermal technology. Ideal for RO reject treatment with low Total Dissolved Solids. Gujarat manufacturer.",
+		"brand": { "@type": "Brand", "name": "Asiatic Engineers" },
+		"manufacturer": { "@type": "Organization", "name": "Asiatic Engineers", "url": "https://www.wastewaterevaporation.com/" },
+		"category": "Industrial Wastewater Treatment Equipment",
+		"offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.wastewaterevaporation.com/zld_lowTds.html" }
+	}
+	</script>
+</head>
