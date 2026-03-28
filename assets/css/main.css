@@ -782,6 +782,31 @@ label {
 .theme-menu-one .main-menu ul li a::before {
   top: 25px;
 }
+
+/* Many top-level links + default 40–60px right margin on each <a> pushes the last item
+   (Contact) past the column. Tighten horizontal spacing on desktop only. */
+@media (min-width: 992px) {
+  .theme-menu-one .main-menu ul.menu-list > li > a {
+    margin-right: 10px !important;
+    margin-left: 0 !important;
+  }
+  .theme-menu-one .main-menu ul.menu-list > li:last-child > a {
+    margin-right: 0 !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .theme-menu-one .main-menu ul.menu-list > li > a {
+    margin-right: 6px !important;
+    font-size: 12px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+  .theme-menu-one .main-menu ul.menu-list > li > a::before {
+    right: -4px;
+    font-size: 11px;
+  }
+}
+
 .theme-menu-one .sticky-menu {
   padding: 15px 0;
 }
