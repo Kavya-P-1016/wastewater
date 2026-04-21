@@ -2,6 +2,9 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: '.',
+  // Relative asset URLs so /index.html vs /folder/ hosting and partial uploads mis-resolve fewer paths.
+  // Always deploy the full `dist/` output after `npm run build`.
+  base: './',
   build: {
     outDir: 'dist',
     rollupOptions: {
