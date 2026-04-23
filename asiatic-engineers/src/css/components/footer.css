@@ -1,1 +1,54 @@
 /* components/footer.css */
+.footer{
+  margin-top:var(--space-20);
+  background:var(--gray-50);
+  border-top:var(--border);
+}
+.footer-band{height:4px;background:linear-gradient(90deg,var(--green-500),transparent);}
+.footer-body{padding:56px 0 24px;}
+.footer-container{
+  max-width:var(--container-xl);
+  margin:0 auto;
+  padding:0 var(--space-8);
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr 1.2fr;
+  gap:var(--space-8);
+}
+.footer-logo img{width:220px;height:auto;}
+.footer-blurb{margin-top:10px;color:var(--gray-700);font-size:.9rem;line-height:1.6;}
+.footer-heading{font-size:1rem;margin-bottom:10px;color:var(--gray-900);}
+.footer-links,.footer-contact-list{list-style:none;display:grid;gap:10px;}
+.footer-links a{color:var(--gray-700);}
+.footer-links a:hover{color:var(--green-500);}
+.footer-contact-list li{display:flex;gap:8px;align-items:flex-start;color:var(--gray-700);font-size:.88rem;line-height:1.5;}
+.footer-socials{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.social-icon{
+  width:34px;height:34px;border:1px solid var(--gray-300);
+  border-radius:999px;display:grid;place-items:center;color:var(--gray-700);
+}
+.social-icon:hover{color:var(--green-500);border-color:var(--green-500);}
+.footer-patented-badge{margin-top:12px;width:82px;height:auto;}
+
+.footer-bottom{border-top:var(--border);padding:14px 0 20px;}
+.footer-bottom-container{
+  max-width:var(--container-xl);
+  margin:0 auto;
+  padding:0 var(--space-8);
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--gray-500);
+  font-size:.8rem;
+}
+.footer-bottom-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.footer-bottom-links a:hover,.footer-credit a:hover{color:var(--green-500);}
+
+@media (max-width:1024px){
+  .footer-container{grid-template-columns:1fr 1fr;gap:var(--space-6);}
+}
+@media (max-width:768px){
+  .footer-body{padding:40px 0 18px;}
+  .footer-container{grid-template-columns:1fr;padding:0 var(--space-5);}
+  .footer-bottom-container{padding:0 var(--space-5);flex-direction:column;align-items:flex-start;}
+}

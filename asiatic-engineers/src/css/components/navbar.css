@@ -1,1 +1,97 @@
 /* components/navbar.css */
+.navbar{
+  position:fixed;
+  inset:0 0 auto 0;
+  height:var(--nav-height);
+  background:var(--gray-0);
+  border-bottom:var(--border);
+  z-index:var(--z-nav);
+}
+
+.nav-container{
+  max-width:var(--container-xl);
+  height:100%;
+  margin:0 auto;
+  padding:0 var(--space-8);
+  display:flex;
+  align-items:center;
+  gap:var(--space-6);
+}
+
+.nav-logo img{height:44px;width:auto;}
+.nav-links{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:var(--space-5);
+  margin-left:auto;
+}
+.nav-link{
+  color:var(--gray-700);
+  font-size:.875rem;
+  font-weight:var(--weight-medium);
+  transition:color var(--transition-fast);
+}
+.nav-link:hover,.nav-link.active{color:var(--green-500);}
+
+.nav-item-dropdown{position:relative;}
+.nav-link-dropdown{display:inline-flex;align-items:center;gap:6px;}
+.dropdown-menu{
+  position:absolute;
+  top:calc(100% + 12px);
+  left:0;
+  min-width:300px;
+  padding:14px;
+  border:var(--border);
+  background:var(--gray-0);
+  box-shadow:var(--shadow-md);
+  display:none;
+  gap:14px;
+}
+.nav-item-dropdown:hover .dropdown-menu{display:flex;}
+.dropdown-group{display:grid;gap:6px;min-width:140px;}
+.dropdown-group-label{font-size:.72rem;letter-spacing:.1em;color:var(--gray-500);text-transform:uppercase;}
+.dropdown-link{font-size:.84rem;color:var(--gray-700);}
+.dropdown-link:hover{color:var(--green-500);}
+
+.nav-cta{white-space:nowrap;}
+.nav-hamburger{
+  display:none;
+  margin-left:auto;
+  border:0;
+  background:transparent;
+  width:40px;height:40px;
+}
+.nav-hamburger span{
+  display:block;
+  width:22px;height:2px;
+  margin:5px auto;
+  background:var(--gray-900);
+}
+
+@media (max-width:1024px){
+  .nav-container{padding:0 var(--space-5);}
+  .nav-cta{display:none;}
+  .nav-hamburger{display:block;}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:var(--nav-height);
+    left:0;right:0;
+    background:var(--gray-0);
+    border-bottom:var(--border);
+    padding:12px var(--space-5) 18px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    margin-left:0;
+  }
+  .navbar.mobile-open .nav-links{display:flex;}
+  .dropdown-menu{
+    position:static;
+    border:0;
+    box-shadow:none;
+    padding:6px 0 0 8px;
+    display:grid;
+  }
+}
