@@ -1,6 +1,3 @@
-import navHtml from "../partials/nav.html?raw";
-import footerHtml from "../partials/footer.html?raw";
-
 (function () {
   "use strict";
 
@@ -8,6 +5,21 @@ import footerHtml from "../partials/footer.html?raw";
     var el = document.getElementById(id);
     if (!el) return;
     el.outerHTML = html;
+  }
+
+  function loadPartial(id, file) {
+    var url = "/partials/" + file;
+    return fetch(url, { credentials: "same-origin" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Failed to load " + url);
+        return res.text();
+      })
+      .then(function (html) {
+        if (/<html[\s>]|<!doctype/i.test(html)) {
+          throw new Error("Invalid partial payload for " + file);
+        }
+        injectPartial(id, html);
+      });
   }
 
   function setActiveNavLinks() {
@@ -504,9 +516,7 @@ import footerHtml from "../partials/footer.html?raw";
     }
   }
 
-  function boot() {
-    injectPartial("site-nav", navHtml);
-    injectPartial("site-footer", footerHtml);
+  function initApp() {
     initScrollResetOnReload();
     initNavbar();
     initAccordions();
@@ -517,6 +527,20 @@ import footerHtml from "../partials/footer.html?raw";
     initHeroSlider();
     initSplitVideo();
     initBlogListing();
+  }
+
+  function boot() {
+    Promise.all([
+      loadPartial("site-nav", "nav.html"),
+      loadPartial("site-footer", "footer.html")
+    ])
+      .catch(function (err) {
+        console.error(err);
+      })
+      .finally(function () {
+        // Always initialize app logic after partial fetch attempts complete.
+        initApp();
+      });
   }
 
   boot();
