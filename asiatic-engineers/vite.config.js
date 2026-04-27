@@ -37,6 +37,16 @@ export default defineConfig({
         blog_steel: 'blog/steel-industry-wastewater-treatment.html',
         blog_brewery: 'blog/brewery-distillery-spent-wash-management.html',
         blog_metal_finish: 'blog/metal-finishing-wastewater-compliance.html',
+        blog_cetp_cluster: 'blog/cetp-design-industrial-clusters.html',
+        blog_textile_dye_recovery: 'blog/textile-dye-bath-recovery-zld.html',
+        blog_pharma_cod: 'blog/pharma-high-cod-effluent-treatment.html',
+        blog_fertilizer_ammonia: 'blog/fertilizer-effluent-ammonia-nitrogen-control.html',
+        blog_cooling_blowdown: 'blog/cooling-tower-blowdown-reuse-roadmap.html',
+        blog_sludge_min: 'blog/etp-sludge-minimization-guide.html',
+        blog_brine_vs_pond: 'blog/brine-concentrator-vs-solar-ponds.html',
+        blog_battery_wastewater: 'blog/battery-manufacturing-wastewater-zld.html',
+        blog_semiconductor_upw: 'blog/semiconductor-upw-reject-recovery.html',
+        blog_electroplating: 'blog/electroplating-chromium-recovery-guide.html',
       }
     }
   },
