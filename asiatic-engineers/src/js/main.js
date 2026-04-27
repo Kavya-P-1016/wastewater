@@ -502,6 +502,42 @@
     apply();
   }
 
+  function initClientLogosFallback() {
+    var grid = document.querySelector(".clients-grid");
+    if (!grid) return;
+    // If logos are already present in HTML, keep them as-is.
+    if (grid.querySelector("img.client-logo")) return;
+
+    var logos = [
+      { src: "assets/img/anglo-french.gif", alt: "Anglo French — client" },
+      { src: "assets/img/atira.png", alt: "ATIRA — client" },
+      { src: "assets/img/cochin-AFCI.png", alt: "Cochin AFCI — client" },
+      { src: "assets/img/Glaxo.jpg", alt: "Glaxo — client" },
+      { src: "assets/img/GUJARAT-INSECTICIDES-LIMITED.gif", alt: "Gujarat Insecticides Limited — client" },
+      { src: "assets/img/indeutsch-industries-private-limited-120x120-1.jpg", alt: "Indeutsch Industries — client" },
+      { src: "assets/img/J-PAL_Logo.png", alt: "J-PAL — client" },
+      { src: "assets/img/kuwait-land-logos-cetrificate-1-2.png", alt: "Kuwait Land — client" },
+      { src: "assets/img/logosite-copy.png", alt: "Modern Denim Ltd — client" },
+      { src: "assets/img/morden-tetrry.png", alt: "Modern Terry — client" },
+      { src: "assets/img/PARIKH-IMPEX-P-LTD.jpg", alt: "Parikh Impex — client" },
+      { src: "assets/img/surya-logo-web.png", alt: "Surya Roshni — client" },
+      { src: "assets/img/tata-chem.jpg", alt: "Tata Chemicals — client" },
+      { src: "assets/img/WhatsApp-Image-2021-10-07-at-4.21.40-PM.jpeg", alt: "Modern Denim Ltd — client" },
+      { src: "assets/img/modern-denim-logo.png", alt: "Modern Denim Ltd — client" }
+    ];
+
+    logos.forEach(function (logo) {
+      var img = document.createElement("img");
+      img.src = logo.src;
+      img.alt = logo.alt;
+      img.className = "client-logo";
+      img.loading = "lazy";
+      img.width = 120;
+      img.height = 60;
+      grid.appendChild(img);
+    });
+  }
+
   function initSplitVideo() {
     var video = document.querySelector(".split-image--video .split-video");
     if (!video) return;
@@ -527,6 +563,7 @@
     initHeroSlider();
     initSplitVideo();
     initBlogListing();
+    initClientLogosFallback();
   }
 
   function boot() {

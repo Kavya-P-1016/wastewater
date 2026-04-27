@@ -1,6 +1,6 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "framework": null,
-  "installCommand": "npm install"
+  "installCommand": "cd asiatic-engineers && npm install",
+  "buildCommand": "cd asiatic-engineers && npm run build",
+  "outputDirectory": "asiatic-engineers/dist",
+  "framework": "vite"
 }
