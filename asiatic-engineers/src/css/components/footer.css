@@ -21,12 +21,33 @@
 .footer-links a{color:var(--gray-700);}
 .footer-links a:hover{color:var(--green-500);}
 .footer-contact-list li{display:flex;gap:8px;align-items:flex-start;color:var(--gray-700);font-size:.88rem;line-height:1.5;}
-.footer-socials{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.footer-socials{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
 .social-icon{
-  width:34px;height:34px;border:1px solid var(--gray-300);
-  border-radius:999px;display:grid;place-items:center;color:var(--gray-700);
+  width:34px;
+  height:34px;
+  border:1px solid var(--gray-300);
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gray-700);
+  line-height:0;
+  flex:0 0 34px;
 }
 .social-icon:hover{color:var(--green-500);border-color:var(--green-500);}
+.social-icon svg{
+  width:18px;
+  height:18px;
+  display:block;
+  flex:0 0 18px;
+}
 .footer-patented-badge{margin-top:12px;width:82px;height:auto;}
 
 .footer-bottom{border-top:var(--border);padding:14px 0 20px;}
