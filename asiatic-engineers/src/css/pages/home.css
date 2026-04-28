@@ -895,6 +895,16 @@ main { overflow-x: hidden; }
   transform-origin: center;
 }
 
+/* Keep About page leadership image properly framed */
+.split-image--about img {
+  aspect-ratio: auto;
+  min-height: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: none;
+}
+
 .split-image--video .split-video {
   width: 100%;
   display: block;
