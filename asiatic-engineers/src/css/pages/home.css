@@ -139,7 +139,7 @@ main { overflow-x: hidden; }
 .nav-item-dropdown { position: relative; }
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: -16px;
   min-width: 260px;
   background: var(--white);
