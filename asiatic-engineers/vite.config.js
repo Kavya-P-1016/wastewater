@@ -47,6 +47,16 @@ export default defineConfig({
         blog_battery_wastewater: 'blog/battery-manufacturing-wastewater-zld.html',
         blog_semiconductor_upw: 'blog/semiconductor-upw-reject-recovery.html',
         blog_electroplating: 'blog/electroplating-chromium-recovery-guide.html',
+        blog_dairy_zld_staging: 'blog/dairy-effluent-zld-staging.html',
+        blog_sugar_brine: 'blog/sugar-mill-brine-management.html',
+        blog_thermal_blowdown: 'blog/thermal-power-blowdown-minimization.html',
+        blog_petro_brine: 'blog/petrochemical-brine-segregation.html',
+        blog_desal_brine: 'blog/desalination-brine-disposal-options.html',
+        blog_tannery_zld: 'blog/tannery-chrome-sulfide-zld.html',
+        blog_pulp_color_brine: 'blog/pulp-paper-color-cod-brine.html',
+        blog_coffee_biogas: 'blog/coffee-effluent-biogas-reuse.html',
+        blog_battery_hydromet: 'blog/battery-recycling-hydromet-brine.html',
+        blog_glass_silica: 'blog/glass-plant-silica-water-reuse.html',
       }
     }
   },
