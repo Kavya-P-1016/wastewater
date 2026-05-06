@@ -57,6 +57,16 @@ export default defineConfig({
         blog_coffee_biogas: 'blog/coffee-effluent-biogas-reuse.html',
         blog_battery_hydromet: 'blog/battery-recycling-hydromet-brine.html',
         blog_glass_silica: 'blog/glass-plant-silica-water-reuse.html',
+        blog_wastewater_audit_2026: 'blog/wastewater-audit-checklist-2026.html',
+        blog_textile_color_playbook: 'blog/textile-color-load-reduction-playbook.html',
+        blog_pharma_solvent_seg: 'blog/pharma-solvent-effluent-segregation.html',
+        blog_fertilizer_ro_opt: 'blog/fertilizer-ro-reject-optimization.html',
+        blog_cooling_kpi: 'blog/cooling-water-kpi-framework.html',
+        blog_cetp_daily_control: 'blog/cetp-operator-daily-control-plan.html',
+        blog_membrane_cip: 'blog/membrane-cip-fouling-prevention.html',
+        blog_high_tds_logistics: 'blog/high-tds-brine-logistics-planning.html',
+        blog_zld_phasing: 'blog/zld-project-phasing-handbook.html',
+        blog_water_energy_playbook: 'blog/industrial-water-energy-cost-reduction.html',
       }
     }
   },
